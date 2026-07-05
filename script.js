@@ -1,54 +1,63 @@
 $(document).ready(function(){
+    // Iniciar animações AOS
+    AOS.init({
+        once: true,
+        offset: 100,
+    });
+
     $(window).scroll(function(){
+        // Navbar sticky
         if(this.scrollY > 20){
             $('.navbar').addClass("sticky");
         }else{
             $('.navbar').removeClass("sticky");
         }
-        if(this.scrollY > 500){
-            $('.scroll-up-btn').addClass("show");
-        }else{
-            $('.scroll-up-btn').removeClass("show");
-        }
-    });
-     $('.scroll-up-btn').click(function(){
-         $('html').animate({scrollTop: 0});
-     });
-
-     var typed = new Typed(".typing", {
-         strings:["Professora", "Empresaria", "Floricultora"],
-         typeSpeed:100,
-         backSpeed:60,
-         loop:true
-     });
-     var typed = new Typed(".typing-2", {
-        strings:["Professora", "Empresaria", "Floricultora"],
-        typeSpeed:100,
-        backSpeed:60,
-        loop:true
     });
 
+    $('.navbar .menu li a').click(function(){
+        $('html').css("scrollBehavior", "smooth");
+    });
+
+    // Efeito de digitação (Typing effect)
+    var typed = new Typed(".typing", {
+        strings: ["Flores Raras.", "Beleza Exótica.", "Rosas Exclusivas."],
+        typeSpeed: 80,
+        backSpeed: 50,
+        loop: true
+    });
+
+    var typed2 = new Typed(".typing-2", {
+        strings: ["Flores Raras.", "Beleza Exótica.", "Rosas Exclusivas."],
+        typeSpeed: 80,
+        backSpeed: 50,
+        loop: true
+    });
+
+    // Menu Toggle (Mobile)
     $('.menu-btn').click(function(){
         $('.navbar .menu').toggleClass("active");
-        $('.menu-btn i').toggleClass("active");
+        $('.menu-btn').toggleClass("active");
     });
+
+    // Owl Carousel (Flores)
     $('.carousel').owlCarousel({
-        margin:20,
-        loop:true,
-        autoplayTimeOut:2000,
-        autoplayHoverPauser:true,
-        responsive:{
-            0:{
-                items:1,
-                nav:false
+        margin: 20,
+        loop: true,
+        autoplayTimeOut: 2500,
+        autoplayHoverPause: true,
+        autoplay: true,
+        responsive: {
+            0: {
+                items: 1,
+                nav: false
             },
-            600:{
-                items:2,
-                nav:false
+            600: {
+                items: 2,
+                nav: false
             },
-            1000:{
-                items:3,
-                nav:false
+            1000: {
+                items: 3,
+                nav: false
             }
         }
     });

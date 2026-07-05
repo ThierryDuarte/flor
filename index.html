@@ -1,168 +1,249 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio  | Front</title>
+    <title>Rosa do Deserto</title>
     
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- AOS CSS for animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="estilo.css">
+
 </head>
 <body>
-    <div class="scroll-up-btn">
-        <ion-icon name="chevron-up-outline"></ion-icon>
-    </div>
+    <!-- Navbar -->
     <div class="navbar">
         <div class="max-width">
-            <div class="logo"><a href="#"><span>Rosa do Deserto</span></a></div>
+            <div class="logo"><a href="#">Rosa do <span>Deserto</span></a></div>
             <ul class="menu">
-                <li><a href="#home">Inicio</a></li>
+                <li><a href="#home">Início</a></li>
                 <li><a href="#about">Sobre</a></li>
                 <li><a href="#services">Serviços</a></li>
-                <li><a href="#skills">Especialidade</a></li>
-                <li><a href="#teams">Equipe</a></li>
+                <li><a href="#flowers">Flores</a></li>
                 <li><a href="#contact">Contato</a></li>
             </ul>
             <div class="menu-btn">
-                <ion-icon name="menu-outline"></ion-icon>
+                <div class="menu-icon-wrapper">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </div>
     </div>
 
-    <!--home inicio-->
+    <!-- Home Section -->
     <section class="home" id="home">
+        <div class="home-bg" style="background-image: url('img/plantacao.jpg');"></div>
+        <div class="home-overlay"></div>
         <div class="max-width">
-            <div class="home-content">
-                <div class="text-1">Ola, meu nome é</div>
-                <div class="text-2">Luciene Santana</div>
-                <div class="text-3">eu sou <span class="typing"></span></div>
-                <a href="https://web.whatsapp.com/send?phone=556474007601" target="_blank">Contratar-me</a>
+            <div class="home-content" data-aos="fade-up" data-aos-duration="1000">
+                <div class="text-1">Olá, seja bem-vindo(a)</div>
+                <div class="text-2">Rosa do Deserto</div>
+                <div class="text-3">Especialistas em <span class="typing"></span></div>
+                <a href="#" class="btn-primary">Fale pelo Direct</a>
             </div>
         </div>
     </section>
 
-    <!--sessão sobre-->
+    <!-- About Section -->
     <section class="about" id="about">
         <div class="max-width">
-            <h2 class="title">Sobre</h2>
+            <h2 class="title" data-aos="fade-up">Sobre Mim</h2>
             <div class="about-content">
-                <div class="column left">
-                    <img src="vaso.jpg" alt="">
+                <div class="column left" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="image-wrapper">
+                        <img src="img/vaso.jpg" alt="Vaso com Rosa do Deserto">
+                        <div class="img-border"></div>
+                    </div>
                 </div>
-                <div class="column right">
-                    <div class="text">Sou Luciene e sou <span class="typing-2"></span></div>
-                    <p>Minha trajetória profissional pode parecer, à primeira vista, uma curva inesperada. Afinal, como alguém formado em Geografia pode encontrar seu caminho no mundo das flores? No entanto, como toda história de vida, a minha é uma tapeçaria complexa, entrelaçada por paixões e oportunidades.</p>
-                    <a href="https://web.whatsapp.com/send?phone=556474007601" target="_blank">Whatsapp</a>
+                <div class="column right" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="text">Especialistas em <span class="typing-2"></span></div>
+                    <p>Nossa trajetória com as Rosas do Deserto começou como uma grande paixão e se transformou em uma busca constante por qualidade e beleza. Como especialistas em flores, nosso conhecimento floresce para oferecer as melhores e mais exóticas variedades de rosas para o seu ambiente.</p>
+                    <a href="#" class="btn-secondary">Fale pelo Direct do Instagram</a>
                 </div>
             </div>
         </div>
     </section>
 
-     <!--sessão especialidade-->
-     <section class="skills" id="skills">
+    <!-- Services Section -->
+    <section class="services" id="services">
         <div class="max-width">
-            <h2 class="title">Especialidades</h2>
-            <div class="skills-content">
-                <div class="column left">
-                    <div class="text">Minhas habilidades criativas e experiencias</div>
-                    <p>Especialista em flores, meu conhecimento floresce como pétalas em jardim. Cada espécie é um segredo revelado, cada arranjo é uma obra de arte. Minha paixão perfuma cada buquê que crio, tornando cada momento especial e memorável. Florescem sentimentos e emoções em cada criação.</p>
-                    <a href="#">Mais informações</a>
+            <h2 class="title" data-aos="fade-up">Nossos Serviços</h2>
+            <div class="serv-content">
+                <div class="card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="box">
+                        <div class="icon-wrapper">
+                            <ion-icon name="flower-outline"></ion-icon>
+                        </div>
+                        <div class="text">Cultivo Especializado</div>
+                        <p>Técnicas avançadas para o melhor desenvolvimento e floração da sua rosa do deserto.</p>
+                    </div>
+                </div>
+                <div class="card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="box">
+                        <div class="icon-wrapper">
+                            <ion-icon name="color-palette-outline"></ion-icon>
+                        </div>
+                        <div class="text">Arranjos Únicos</div>
+                        <p>Arranjos criativos e personalizados que transformam qualquer ambiente.</p>
+                    </div>
+                </div>
+                <div class="card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="box">
+                        <div class="icon-wrapper">
+                            <ion-icon name="leaf-outline"></ion-icon>
+                        </div>
+                        <div class="text">Consultoria</div>
+                        <p>Dicas e acompanhamento para manter suas plantas saudáveis e bonitas o ano todo.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-     <!--sessão equipe-->
-     <section class="teams" id="teams">
+    <!-- Flowers Carousel Section -->
+    <section class="flowers" id="flowers">
         <div class="max-width">
-            <h2 class="title">Nossos Tipos de Rosa do deserto</h2>
-           <div class="carousel owl-carousel ">
-               <div class="card">
-                   <div class="box">
-                       <img src="rosa.jpg" alt="">
-                       <div class="text">Rosa do deserto</div>
-                       <p>Em breve</p>
-                   </div>
-               </div>
-               <div class="card">
-                <div class="box">
-                    <img src="rosa2.jpg" alt="">
-                    <div class="text">Rosa do Deserto</div>
-                    <p>Em breve</p>
+            <h2 class="title" data-aos="fade-up">Nossas Variedades</h2>
+            <div class="carousel owl-carousel" data-aos="fade-up" data-aos-duration="1200">
+                <div class="card">
+                    <div class="box">
+                        <img src="img/rosa.jpg" alt="Rosa">
+                        <div class="text">Rosa Tradicional</div>
+                        <p>Delicadeza clássica</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <img src="img/rosa2.jpg" alt="Rosa 2">
+                        <div class="text">Rosa Brilhante</div>
+                        <p>Cores vibrantes</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <img src="img/preta.jpg" alt="Preta">
+                        <div class="text">Rosa Negra</div>
+                        <p>Rara e sofisticada</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <img src="img/pretorosa.jpg" alt="Preta e Rosa">
+                        <div class="text">Negra e Rosa</div>
+                        <p>Contraste perfeito</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <img src="img/branca.jpg" alt="Branca">
+                        <div class="text">Rosa Branca</div>
+                        <p>Pura e elegante</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <img src="img/brancorosa.jpg" alt="Branca e Rosa">
+                        <div class="text">Branca e Rosa</div>
+                        <p>Beleza dupla</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <img src="img/brancored.jpg" alt="Branca e Vermelha">
+                        <div class="text">Branca e Vermelha</div>
+                        <p>Paixão e pureza</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <img src="img/rosapreta.jpg" alt="Rosa e Preta">
+                        <div class="text">Exótica</div>
+                        <p>Mistura incrível</p>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="box">
-                    <img src="preta.jpg" alt="">
-                    <div class="text">Rosa do Deserto: Preta</div>
-                    <p>Em breve</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="box">
-                    <img src="pretorosa.jpg" alt="">
-                    <div class="text">Rosa do Deserto: Preta e rosa</div>
-                    <p>Em breve</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="box">
-                    <img src="branca.jpg" alt="">
-                    <div class="text">Rosa do Deserto: branca</div>
-                    <p>Em breve</p>
-                </div>
-            </div>
-           </div>
         </div>
     </section>
 
-    <!--Sessão contato-->
+    <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="max-width">
-            <h2 class="title">Contato</h2>
+            <h2 class="title" data-aos="fade-up">Contato</h2>
             <div class="contact-content">
-               <div class="column left">
-                   <div class="text">Fale Conosco</div>
-                   <p>cidade: Iporá-Go, Rua Goiania, número: 1392, Em frente a um sobrado, casa verde do portão branco</p>
-               
-               <div class="icons">
-                   <div class="row">
-                        <ion-icon name="person-outline"></ion-icon>
-                        <div class="info">
-                            <div class="head">Nome</div>
-                            <div class="sub-title">Luciene Santana</div>
+                <div class="column left" data-aos="fade-right">
+                    <div class="text">Fale Conosco</div>
+                    <p>Venha nos visitar e conhecer de perto a beleza das nossas rosas do deserto.</p>
+                    
+                    <div class="icons">
+                        <div class="row">
+                            <ion-icon name="location-outline"></ion-icon>
+                            <div class="info">
+                                <div class="head">Endereço</div>
+                                <div class="sub-title">Rua Goiânia, 1392. Iporá-GO</div>
+                                <div class="desc">Em frente a um sobrado, casa verde do portão branco.</div>
+                            </div>
                         </div>
-                   </div>
-                   <div class="row">
-                    <ion-icon name="logo-whatsapp"></ion-icon>
-                    <div class="info">
-                        <div class="head">Whatsapp</div>
-                        <div class="sub-title">556474007601</div>
+                        <div class="row">
+                            <ion-icon name="flower-outline"></ion-icon>
+                            <div class="info">
+                                <div class="head">Especialidade</div>
+                                <div class="sub-title">Rosa do Deserto</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                            <div class="info">
+                                <div class="head">Instagram</div>
+                                <div class="sub-title">Fale pelo Direct no Instagram</div>
+                            </div>
+                        </div>
                     </div>
-               </div>
-           </div>
-               </div>
-            </div><!--column left-->
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3826.546166058856!2d-51.11619162496192!3d-16.447859739384967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9366bc3713f6ac61%3A0x820405a32edf6d23!2sR.%20Goi%C3%A2nia%2C%201392%20-%20Vila%20Sao%20Francisco%2C%20Ipor%C3%A1%20-%20GO%2C%2076200-000!5e0!3m2!1spt-BR!2sbr!4v1695696770152!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </form>
-            </div>
+                </div>
+                <div class="column right" data-aos="fade-left">
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3826.546166058856!2d-51.11619162496192!3d-16.447859739384967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9366bc3713f6ac61%3A0x820405a32edf6d23!2sR.%20Goi%C3%A2nia%2C%201392%20-%20Vila%20Sao%20Francisco%2C%20Ipor%C3%A1%20-%20GO%2C%2076200-000!5e0!3m2!1spt-BR!2sbr!4v1695696770152!5m2!1spt-BR!2sbr" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!--sessão  footer-->
+    <!-- Footer -->
     <footer>
-        <span>Criado por <a href="#">Front</a> | Todos os direitos reservado 2021</span>
+        <div class="max-width" data-aos="fade-up">
+            <span>Criado com <ion-icon name="heart" style="color:#ff4d6d; vertical-align: middle;"></ion-icon> por <strong>Rosa do Deserto</strong> | Todos os direitos reservados &copy; 2026</span>
+        </div>
     </footer>
 
+    <!-- Scripts -->
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- Ionicons -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="script.js"></script>
+    
+    <!-- Waypoints & OwlCarousel & Typed & AOS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom Script -->
+    <script src="script.js"></script>
 
 </body>
 </html>
