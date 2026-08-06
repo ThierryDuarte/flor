@@ -16,6 +16,8 @@ $(document).ready(function(){
 
     $('.navbar .menu li a').click(function(){
         $('html').css("scrollBehavior", "smooth");
+        $('.navbar .menu').removeClass("active");
+        $('.menu-btn').removeClass("active");
     });
 
     // Efeito de digitação (Typing effect)

@@ -22,6 +22,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -29,6 +30,11 @@ body {
     color: var(--text-color);
     font-family: var(--font-body);
     overflow-x: hidden;
+}
+
+img,
+iframe {
+    max-width: 100%;
 }
 
 .max-width {
@@ -403,7 +409,7 @@ section .title::before {
 
 .services .serv-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
     gap: 30px;
 }
 
@@ -576,6 +582,7 @@ section .title::before {
     color: var(--text-muted);
     font-size: 15px;
     margin-top: 5px;
+    overflow-wrap: anywhere;
 }
 
 .contact .column.right {
@@ -628,13 +635,58 @@ footer strong {
 }
 
 @media (max-width: 768px) {
+    body {
+        width: 100%;
+    }
+    section {
+        padding: 60px 0;
+        overflow: hidden;
+    }
+    .navbar {
+        padding: 15px 0;
+    }
+    .navbar .logo a {
+        font-size: 26px;
+    }
+    .home {
+        min-height: 560px;
+        height: 100svh;
+    }
+    .home-bg {
+        background-attachment: scroll;
+        background-position: center top;
+    }
+    .home-content {
+        width: 100%;
+        padding-top: 40px;
+    }
+    .about .column.right p {
+        text-align: left;
+    }
+    .about .about-content,
+    .contact .contact-content {
+        gap: 28px;
+    }
+    .services .serv-content {
+        grid-template-columns: 1fr;
+    }
+    .contact .map-container iframe {
+        height: 300px;
+        display: block;
+    }
+    .contact .icons .row {
+        align-items: flex-start;
+    }
+    .contact .icons .info {
+        min-width: 0;
+    }
     .menu-btn {
         display: flex;
         z-index: 999;
     }
     .navbar .menu {
         position: fixed;
-        height: 100vh;
+        height: 100dvh;
         width: 100%;
         left: -100%;
         top: 0;
@@ -659,10 +711,46 @@ footer strong {
     }
     .home-content .text-2 { font-size: 50px; }
     .home-content .text-3 { font-size: 24px; }
-
 }
 
 @media (max-width: 480px) {
-    .home-content .text-2 { font-size: 40px; }
-    section .title { font-size: 32px; }
+    .max-width { padding: 0 20px; }
+    .btn-primary, .btn-secondary {
+        max-width: 100%;
+        padding: 11px 22px;
+        font-size: 16px;
+        text-align: center;
+    }
+    .home {
+        min-height: 520px;
+    }
+    .home-content .text-1 {
+        font-size: 20px;
+    }
+    .about .column.left .img-border {
+        top: -10px;
+        left: -10px;
+    }
+    .services .card,
+    .flowers .carousel .card {
+        padding: 24px 18px;
+    }
+    .home-content .text-2 { font-size: 38px; }
+    .home-content .text-3 { font-size: 22px; }
+    section .title {
+        font-size: 32px;
+        margin-bottom: 42px;
+    }
+}
+
+@media (max-width: 360px) {
+    .max-width { padding: 0 16px; }
+    .navbar .logo a {
+        font-size: 23px;
+    }
+    .home-content .text-2 { font-size: 34px; }
+    .home-content .text-3 { font-size: 20px; }
+    .contact .icons .row ion-icon {
+        margin-right: 14px;
+    }
 }
